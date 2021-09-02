@@ -1,3 +1,5 @@
+# googleのクローラから除外するファイルを指定できる。
+# SEOを向上させるために必要なファイル。
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
