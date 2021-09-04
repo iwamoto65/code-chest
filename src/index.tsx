@@ -1,28 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { CssBaseline } from '@material-ui/core';
+import { ThemeProvider as MaterialUiThemeProvider } from '@material-ui/styles';
+import { theme } from './styles/material-ui/custom-style';
 import { App } from './App';
-import { createGlobalStyle } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    font-family:
-      -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  }
-`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
+    <MaterialUiThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </MaterialUiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
